@@ -1,0 +1,827 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-left .logo {
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 5cm;
+}
+
+.navbar nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif, Times, serif;
+  font-size: 12px;
+}
+
+.menu-left,
+.menu-right {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-left li,
+.menu-right li {
+  margin:10px;
+  margin-left: 10px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  align-items: center;
+  color: #000;
+  padding-right: 160px;
+}
+.custom-icon {
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: black;
+  border: none;
+}
+.slideshow-container {
+  position: relative;
+  width: 100vw;
+  height: 900px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute; /*ซ้อนกัน*/
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 12s infinite; /* รูปละ3วิ */
+}
+
+/*กำหนดเวลาหน่วงแต่ละภาพ*/
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 3s;
+}
+.slide:nth-child(3) {
+  animation-delay: 6s;
+}
+.slide:nth-child(4) {
+  animation-delay: 9s;
+}
+
+/*เริ่มที่ ภาพไม่ขึ้น - ค่อยๆขึ้น - มองเห็น - ค่อยๆfade - ภาพต่อไป */
+@keyframes fade {
+  0% { opacity: 0; }
+  8% { opacity: 1; } 
+  25% { opacity: 1; } 
+  33% { opacity: 0; } 
+  100% { opacity: 0; } 
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainpage{
+  text-align: center;
+  margin-top: 50px;
+  font-family: "sukhumvit",arial,sans-serif ;
+  font-style:bold;
+}
+
+.mainpage p a {
+  font-size: 25px;
+}
+
+.mainpage p{
+  font-size: 12px;
+}
+.shoes_first{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
+}
+
+.shoes_second{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
+}
+
+.preview{
+  display: flex;
+  list-style: none;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 22px;
+}
+.preview img{
+  height: 650px;
+  width: 430px;
+}
+
+.preview p {
+  margin-top: 10px;
+  font-size: medium;
+}
+
+.preview a:hover {
+  text-decoration: none;
+}
+
+
+.custom_hr {
+  max-width: 1400px;
+  height: 3px;
+  background-color: black;
+  border: none;
+  margin: 20px auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pic1 {
+  grid-row: 1/3;
+  grid-column: 1 / 3;
+}
+.pic2 {
+  grid-row: 1/2;
+  grid-column: 3/5;
+}
+.pic3 {
+  grid-row: 2;
+  grid-column: 3;
+}
+.pic4 {
+  grid-row: 2;
+  grid-column: 4;
+}
+.pic5 {
+  grid-row: 3;
+  grid-column: 1/3;
+}
+.pic6 {
+  grid-row: 3;
+  grid-column: 3/5;
+}
+.pic7 {
+  grid-row: 4;
+  grid-column: 1/4;
+}
+.pic8 {
+  grid-row: 4;
+  grid-column: 4;
+}
+
+
+.Brand{
+  font-family: sans-serif ;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+
+}
+
+.Brand span {
+  font-size: 12px;
+}
+
+
+.brand_logo1 {
+  display:flex;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+}
+
+.brand_logo1 img {
+  height: 157.36px;
+  width: 114;
+}
+
+.brand_logo2 {
+  display:flex;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+}
+
+.brand_logo2 img {
+  height: 157.36px;
+  width: 114;
+}
+
+.choosedot {
+  justify-content: center;
+}
+.preview3 img{
+  height:667px;
+  width:1600px;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin: 40px 0 30px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 15em;
+  gap: 20px;
+}
+
+.blog-content {
+  padding: 15px;
+}
+
+.blog-time {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 8px;
+  text-align: left;
+
+}
+
+.blog-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #000;
+  text-align: left;
+}
+
+.blog-editor {
+  font-size: 12px;
+  color: #777;
+  text-align: left;
+}
+
+.blog-category {
+  font-size: 12px;
+  text-align: left;
+  color: #333;
+}
+
+.category-link {
+  color: #000;
+  text-decoration: none;
+  text-align: left;
+
+}
+
+.category-link:hover {
+  text-decoration: underline;
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.view_all{
+  text-align: center;
+  margin: auto 0;
+}
+
+.view_all a{
+    padding: 0 30px;
+    border: solid 1px #000;
+    background-color: #fff;
+    color: #000;
+    line-height: 46px;
+    margin: 30px auto 0;
+    display: inline-block;
+    min-width: 220px;
+}
+
+.view_all a:hover {
+  background-color: #000; 
+  color: #fff;          
+  border-color: #fff;    
+}
+
+.footer {
+  padding: 65px 0;  
+}
+
+.container_footer {
+  max-width: 1200px;
+  padding: 0 40px;
+  font-family: sans-serif;
+}
+
+
+.background_email img {
+  display: block;
+  width: 100%;
+  height: 90px;
+}
+
+.newsletter {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.newsletter-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.newsletter-text {
+  width: 30%;
+  text-align: left;
+}
+
+.newsletter-text h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.newsletter-text p {
+  font-size: 12px;
+  margin: 5px 0 0;
+}
+
+.newsletter-form {
+  width: 60%;
+  display: flex;
+}
+
+.newsletter-form input {
+  width: 45%;
+  padding: 10px 15px;
+  border: none;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.newsletter-form button:hover {
+  background-color: #555;
+}
+
+
+
+.footer-links {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 90px; 
+}
+
+.footer-column {
+  width: 22%;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  color: #333;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #333;
+}
+
+.footer-column ul li a {
+  color: #333;
+}
+
+.social-icons a i {
+  font-size: 24px; 
+  margin-right: 10px; 
+}
+
+
+/* ===== CSS สำหรับ Responsive (CSS-only) ===== */
+
+/* ซ่อนองค์ประกอบเมนูมือถือบนหน้าจอขนาดใหญ่ */
+.menu-toggle,
+.hamburger-menu,
+.menu-overlay,
+.close-menu {
+  display: none;
+}
+
+/* ซ่อน checkbox */
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+/* สไตล์สำหรับ overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 998;
+}
+
+/* Media Queries สำหรับอุปกรณ์ขนาดกลาง (แท็บเล็ต) */
+@media only screen and (max-width: 1024px) {
+  .navbar-left .logo {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .header-icons {
+    padding-right: 20px;
+  }
+  
+  .shoes_first, .shoes_second {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .shoes_first li, .shoes_second li {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .preview {
+    flex-wrap: wrap;
+  }
+  
+  .preview li {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .preview img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .blog-grid {
+    padding: 0 5em;
+  }
+  
+  .brand_logo1, .brand_logo2 {
+    flex-wrap: wrap;
+  }
+  
+  .brand_logo1 li, .brand_logo2 li {
+    width: calc(33.33% - 40px);
+    margin-bottom: 20px;
+  }
+}
+
+/*สำหรับมือถือ */
+@media only screen and (max-width: 768px) {
+  
+  /* ปรับ header */
+  .navbar {
+    padding: 15px 0;
+    position: relative;
+  }
+  
+  .navbar-left .logo {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-left .logo img {
+    width: 100px;
+    padding-left:10px ;
+  }
+  
+  /* ซ่อนเมนูปกติ */
+  .menu-left {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    padding: 60px 20px 20px;
+    z-index: 999;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+  
+  .menu-left li {
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .menu-right {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .header-icons {
+    padding-right: 0;
+    gap: 15px;
+  }
+  
+
+  /* ปรับสไลด์โชว์ */
+  .slideshow-container {
+    height: 50vh;
+  }
+  
+  /* ปรับการแสดงสินค้า */
+  .shoes_first, .shoes_second {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .shoes_first li, .shoes_second li {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  /* ปรับพรีวิว */
+  .preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .preview li {
+    width: 100%;
+  }
+  
+  /* ปรับกริดรูปภาพ */
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 15px;
+  }
+  
+  .pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  
+  /* ปรับแบรนด์ */
+  .brand_logo1, .brand_logo2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .brand_logo1 li, .brand_logo2 li {
+    width: 100%;
+  }
+  
+  .brand_logo1 img, .brand_logo2 img {
+    height: auto;
+    max-height: 120px;
+    width: auto;
+    max-width: 100%;
+  }
+  
+  /* ปรับพรีวิว 3 */
+  .preview3 img {
+    height: auto;
+    width: 100%;
+  }
+  
+  /* ปรับบล็อก */
+  .blog-grid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+  
+  /* ปรับฟุตเตอร์ */
+  .newsletter-content {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  
+  .newsletter-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .newsletter-form {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .newsletter-form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .footer-columns {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  
+  .footer-column {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .container_footer {
+    padding: 0 15px;
+  }
+}
+
+/* Media Queries สำหรับอุปกรณ์มือถือขนาดเล็ก */
+@media only screen and (max-width: 480px) {
+  .shoes_first, .shoes_second {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .slideshow-container {
+    height: 40vh;
+  }
+  
+  .view_all a {
+    min-width: 180px;
+    padding: 0 15px;
+  }
+  
+  /* ปรับขนาดฟอนต์ */
+  .mainpage p a {
+    font-size: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .blog-title {
+    font-size: 14px;
+  }
+}
+
+/* เพิ่มปุ่มกลับขึ้นด้านบน (CSS-only) */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.back-to-top::after {
+  content: "↑";
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .back-to-top {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* CSS สำหรับ Accordion Footer บนมือถือ */
+@media only screen and (max-width: 768px) {
+  .footer-column h4 {
+    position: relative;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+  
+  .footer-column h4::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .footer-column ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .footer-column input[type="checkbox"] {
+    display: none;
+  }
+  
+  .footer-column input[type="checkbox"]:checked ~ ul {
+    max-height: 500px;
+  }
+  
+  .footer-column input[type="checkbox"]:checked ~ h4::after {
+    content: "-";
+  }
+}
